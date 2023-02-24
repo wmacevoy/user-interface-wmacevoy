@@ -11,6 +11,11 @@ PATH  := $(ANDROID_SDK)/tools:$(ANDROID_SDK)/tools/bin:$(ANDROID_SDK)/platform-t
 
 doctor:
 	PATH="$(PATH)" JAVA_HOME="$(JAVA_HOME)" flutter doctor
+
+.PHONY: licenses
+licenses:
+	PATH="$(PATH)" JAVA_HOME="$(JAVA_HOME)" flutter doctor --android-licenses
+
 test:
 	PATH="$(PATH)" JAVA_HOME="$(JAVA_HOME)" cd cli && dart test
 go_moon:
