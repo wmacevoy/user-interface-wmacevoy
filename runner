@@ -13,7 +13,7 @@ then
 	fi
     done
 fi
-if [ -z ${FLUTTER_DIR+x} -o \! \( -x "$FLUTTER_DIR/bin/flutter" -a -x "$FLUTTER_DIR/bin/dart" ]
+if [ -z ${FLUTTER_DIR+x} -o ! \( -x "$FLUTTER_DIR/bin/flutter" -a -x "$FLUTTER_DIR/bin/dart" \) ]
 then
     echo "Cannot find flutter install in '$SCRIPT_DIR/env/flutter', '$GIT_DIR/env/flutter', or '$GIT_DIR/../flutter'"
     exit 1
